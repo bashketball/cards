@@ -1,0 +1,12 @@
+{:slug "michael-jordan"
+ :name "Michael Jordan"
+ :set-id "demo-set"
+ :card-type :card-type/PLAYER_CARD
+ :deck-size 6
+ :sht 5
+ :pss 4
+ :def 4
+ :speed 5
+ :size :size/MD
+ :abilities ["Clutch" "Fadeaway"]
+ :image-prompt "A legendary basketball player in mid-air, tongue out, about to dunk"}

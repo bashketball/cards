@@ -1,0 +1,12 @@
+{:slug "shaq"
+ :name "Shaquille O'Neal"
+ :set-id "demo-set"
+ :card-type :card-type/PLAYER_CARD
+ :deck-size 5
+ :sht 4
+ :pss 2
+ :def 5
+ :speed 3
+ :size :size/LG
+ :abilities ["Dominant" "Backboard Breaker"]
+ :image-prompt "A massive center dominating the paint, about to slam dunk with authority"}

@@ -1,0 +1,7 @@
+{:slug "home-court"
+ :name "Home Court Advantage"
+ :set-id "demo-set"
+ :card-type :card-type/TEAM_ASSET_CARD
+ :fate 4
+ :asset-power "+1 to all shot attempts. Opponent fate rolls of 1 count as misses."
+ :image-prompt "A packed arena with fans in team colors creating an intimidating atmosphere"}
