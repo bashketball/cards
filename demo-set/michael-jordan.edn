@@ -1,6 +1,6 @@
 {:slug "michael-jordan"
  :name "Michael Jordan"
- :set-id "demo-set"
+ :set-slug "demo-set"
  :card-type :card-type/PLAYER_CARD
  :deck-size 6
  :sht 5

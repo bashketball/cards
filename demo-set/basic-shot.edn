@@ -1,6 +1,6 @@
 {:slug "basic-shot"
  :name "Basic Shot"
- :set-id "demo-set"
+ :set-slug "demo-set"
  :card-type :card-type/STANDARD_ACTION_CARD
  :fate 0
  :offense "Take a standard shot attempt. Use your SHT stat."
