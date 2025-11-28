@@ -1,0 +1,1 @@
+{:image-prompt "A really short guy dribbling", :slug "mugsy-bogues", :speed 4, :name "Mugsy Bogues", :card-type :card-type/PLAYER_CARD, :sht 4, :set-slug "demo-set", :abilities ["Throw a pass"], :size :size/SM, :def 1, :deck-size 7, :pss 5}
