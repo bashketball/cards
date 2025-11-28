@@ -5,7 +5,7 @@
  :deck-size 5
  :sht 4
  :pss 2
- :def 5
+ :def 6
  :speed 3
  :size :size/LG
  :abilities ["Dominant" "Backboard Breaker"]
