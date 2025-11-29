@@ -13,7 +13,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
         with:
-          fetch-depth: 0  # Needed for git describe
+          fetch-depth: 0 # Needed for git describe
 
       - name: Setup Clojure
         uses: DeLaGuardo/setup-clojure@12.5
@@ -24,7 +24,7 @@ jobs:
         env:
           GITHUB_ACTOR: ${{ github.actor }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: clj -T:build deploy
+        run: clojure -T:build deploy
 
       - name: Upload JAR to Release
         uses: softprops/action-gh-release@v2
