@@ -1,0 +1,7 @@
+{:slug "shoot-check"
+ :name "Shoot / Check"
+ :set-slug "base"
+ :card-type :card-type/STANDARD_ACTION_CARD
+ :fate 2
+ :offense "Shoot: Take a shot using your SHT stat."
+ :defense "Check: Contest an opponent with the ball using DEF. If successful, they lose the ball."}

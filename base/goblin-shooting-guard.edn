@@ -1,0 +1,12 @@
+{:slug "goblin-shooting-guard"
+ :name "Goblin Shooting Guard"
+ :set-slug "base"
+ :card-type :card-type/PLAYER_CARD
+ :deck-size 7
+ :sht 4
+ :pss 3
+ :def 1
+ :speed 4
+ :size :size/SM
+ :abilities []
+ :image-prompt "A wiry green goblin with a mischievous grin launching a three-pointer, oversized ears flapping"}

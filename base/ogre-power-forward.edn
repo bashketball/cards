@@ -1,0 +1,12 @@
+{:slug "ogre-power-forward"
+ :name "Ogre Power Forward"
+ :set-slug "base"
+ :card-type :card-type/PLAYER_CARD
+ :deck-size 4
+ :sht 2
+ :pss 1
+ :def 4
+ :speed 2
+ :size :size/LG
+ :abilities []
+ :image-prompt "A hulking one-eyed ogre posting up aggressively, small jersey stretched tight over massive frame"}

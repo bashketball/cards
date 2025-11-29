@@ -1,0 +1,12 @@
+{:slug "halfling-point-guard"
+ :name "Halfling Point Guard"
+ :set-slug "base"
+ :card-type :card-type/PLAYER_CARD
+ :deck-size 7
+ :sht 2
+ :pss 5
+ :def 2
+ :speed 4
+ :size :size/SM
+ :abilities []
+ :image-prompt "A nimble barefoot halfling threading passes through defenders' legs, curly hair bouncing"}

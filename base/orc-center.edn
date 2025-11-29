@@ -1,0 +1,12 @@
+{:slug "orc-center"
+ :name "Orc Center"
+ :set-slug "base"
+ :card-type :card-type/PLAYER_CARD
+ :deck-size 5
+ :sht 2
+ :pss 1
+ :def 4
+ :speed 2
+ :size :size/LG
+ :abilities []
+ :image-prompt "A massive green-skinned orc in basketball gear, tusks protruding, ready to block shots under the hoop"}

@@ -1,0 +1,12 @@
+{:slug "minotaur-center"
+ :name "Minotaur Center"
+ :set-slug "base"
+ :card-type :card-type/PLAYER_CARD
+ :deck-size 5
+ :sht 2
+ :pss 2
+ :def 4
+ :speed 3
+ :size :size/LG
+ :abilities []
+ :image-prompt "A bull-headed minotaur with massive horns setting devastating screens, steam snorting from nostrils"}

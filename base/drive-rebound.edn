@@ -1,0 +1,7 @@
+{:slug "drive-rebound"
+ :name "Drive / Rebound"
+ :set-slug "base"
+ :card-type :card-type/STANDARD_ACTION_CARD
+ :fate 1
+ :offense "Drive: Move up to half your SPD (rounded down), then take a shot using SHT."
+ :defense "Rebound: Move up to half your SPD (rounded down), then attempt to catch a loose ball using DEF."}

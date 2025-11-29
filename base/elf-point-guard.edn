@@ -1,0 +1,12 @@
+{:slug "elf-point-guard"
+ :name "Elf Point Guard"
+ :set-slug "base"
+ :card-type :card-type/PLAYER_CARD
+ :deck-size 6
+ :sht 3
+ :pss 4
+ :def 2
+ :speed 5
+ :size :size/SM
+ :abilities []
+ :image-prompt "A graceful elf with pointed ears dribbling a basketball with supernatural agility, flowing hair trailing behind"}

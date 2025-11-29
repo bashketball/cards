@@ -1,0 +1,12 @@
+{:slug "dwarf-power-forward"
+ :name "Dwarf Power Forward"
+ :set-slug "base"
+ :card-type :card-type/PLAYER_CARD
+ :deck-size 5
+ :sht 3
+ :pss 2
+ :def 4
+ :speed 2
+ :size :size/MD
+ :abilities []
+ :image-prompt "A stocky bearded dwarf setting a brutal screen, braided beard tucked into jersey, low center of gravity"}

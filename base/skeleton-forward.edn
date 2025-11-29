@@ -1,0 +1,12 @@
+{:slug "skeleton-forward"
+ :name "Skeleton Forward"
+ :set-slug "base"
+ :card-type :card-type/PLAYER_CARD
+ :deck-size 6
+ :sht 3
+ :pss 2
+ :def 3
+ :speed 3
+ :size :size/MD
+ :abilities []
+ :image-prompt "An animated skeleton in a tattered jersey, empty eye sockets glowing, bones rattling as it drives to the basket"}
