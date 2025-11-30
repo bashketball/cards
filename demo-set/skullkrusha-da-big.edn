@@ -1,0 +1,12 @@
+{:slug "skullkrusha-da-big"
+ :name "Skullkrusha da Big"
+ :set-slug "demo-set"
+ :card-type :card-type/PLAYER_CARD
+ :deck-size 5
+ :sht 4
+ :pss 2
+ :def 6
+ :speed 3
+ :size :size/LG
+ :abilities ["Skull Collector" "Backboard Smasher"]
+ :image-prompt "A massive green-skinned Orc or Troll dominating the paint of a blood-stained court, muscles bulging, tusks gleaming, about to shatter the backboard with a devastating dunk"}

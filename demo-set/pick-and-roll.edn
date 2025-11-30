@@ -1,8 +1,0 @@
-{:slug "pick-and-roll"
- :name "Pick and Roll"
- :set-slug "demo-set"
- :card-type :card-type/SPLIT_PLAY_CARD
- :fate 2
- :offense "Set a screen and roll to the basket. +1 to shot for ball handler, +2 for screener if they receive the pass."
- :defense "Switch or hedge on the screen. -1 to opposing shot if you have a big defender."
- :image-prompt "Two players executing a classic pick and roll, screener rolling to the basket"}

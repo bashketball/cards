@@ -1,0 +1,12 @@
+{:slug "gorkael-the-airborne"
+ :name "Gork'ael the Airborne"
+ :set-slug "demo-set"
+ :card-type :card-type/PLAYER_CARD
+ :deck-size 6
+ :sht 5
+ :pss 4
+ :def 4
+ :speed 5
+ :size :size/MD
+ :abilities ["Blood Fury" "Shadow Step"]
+ :image-prompt "A graceful High Elf basketball player soaring through the air in a stone arena, pointed ears visible, elegant yet deadly, about to slam a spiked ball through a bone-rimmed hoop"}

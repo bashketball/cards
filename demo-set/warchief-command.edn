@@ -1,0 +1,7 @@
+{:slug "warchief-command"
+ :name "Warchief's Command"
+ :set-slug "demo-set"
+ :card-type :card-type/COACHING_CARD
+ :fate 1
+ :coaching "The Warchief bellows orders. Draw 2 cards and discard 1. May rearrange your players on the court. Anyone who disobeys gets eaten."
+ :image-prompt "A scarred Orc warchief in coaching robes screaming at cowering players during a break, pointing at a crude battle diagram drawn in blood"}

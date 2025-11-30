@@ -1,7 +1,0 @@
-{:slug "time-out"
- :name "Time Out"
- :set-slug "demo-set"
- :card-type :card-type/COACHING_CARD
- :fate 1
- :coaching "Stop play and reset. Draw 2 cards and discard 1. May rearrange your players on the court."
- :image-prompt "A coach drawing up a play on a whiteboard during a timeout huddle"}

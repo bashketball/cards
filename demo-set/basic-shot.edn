@@ -1,8 +1,8 @@
 {:slug "basic-shot"
- :name "Basic Shot"
+ :name "Hurl"
  :set-slug "demo-set"
  :card-type :card-type/STANDARD_ACTION_CARD
  :fate 0
- :offense "Take a standard shot attempt. Use your SHT stat."
- :defense "Standard defense. Use your DEF stat to contest."
- :image-prompt "A player taking a basic jump shot in a standard basketball play"}
+ :offense "Hurl the ball at the hoop. Use your SHT stat. Try not to hit the referee."
+ :defense "Get in the way. Use your DEF stat to contest. Blocking with your face is acceptable."
+ :image-prompt "A brutish player hurling a spiked ball toward a bone-rimmed hoop while a defender leaps to block with reckless abandon"}

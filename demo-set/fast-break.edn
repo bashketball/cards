@@ -1,7 +1,0 @@
-{:slug "fast-break"
- :name "Fast Break"
- :set-slug "demo-set"
- :card-type :card-type/PLAY_CARD
- :fate 3
- :play "Push the ball up court quickly for an easy bucket. +2 to shot if you have the fastest player."
- :image-prompt "Players sprinting down court in transition, defender caught out of position"}

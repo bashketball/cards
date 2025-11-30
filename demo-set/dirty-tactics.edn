@@ -1,0 +1,7 @@
+{:slug "dirty-tactics"
+ :name "Dirty Tactics"
+ :set-slug "demo-set"
+ :card-type :card-type/COACHING_CARD
+ :fate 3
+ :coaching "Move one player 3x their current SPD. The referee wasn't looking anyway."
+ :image-prompt "A sneaky Goblin creeping up behind an opposing player, reaching out to yank their loincloth while a corrupt referee looks the other way"}

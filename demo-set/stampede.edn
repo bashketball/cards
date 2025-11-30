@@ -1,0 +1,7 @@
+{:slug "stampede"
+ :name "Stampede"
+ :set-slug "demo-set"
+ :card-type :card-type/PLAY_CARD
+ :fate 3
+ :play "Charge down the court in a thundering rush. +2 to shot if you have the fastest player. Knocked down opponents stay down."
+ :image-prompt "A horde of fantasy players stampeding down a stone court, Orcs and Goblins trampling anyone in their path, dust and debris flying"}

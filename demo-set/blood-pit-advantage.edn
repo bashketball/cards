@@ -1,0 +1,7 @@
+{:slug "blood-pit-advantage"
+ :name "Blood Pit Advantage"
+ :set-slug "demo-set"
+ :card-type :card-type/TEAM_ASSET_CARD
+ :fate 4
+ :asset-power "+1 to all shot attempts. Opponent fate rolls of 1 count as misses. The crowd throws things at visitors."
+ :image-prompt "A roaring stone arena packed with screaming Orcs, Goblins, and Trolls waving banners and weapons, torches lighting a blood-stained court"}

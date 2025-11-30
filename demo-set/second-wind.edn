@@ -1,0 +1,5 @@
+{:slug "second-wind"
+ :name "Second Wind"
+ :set-slug "demo-set"
+ :card-type :card-type/ABILITY_CARD
+ :abilities ["May attempt a second shot if the first misses" "Once per game" "Fueled by pure rage"]}

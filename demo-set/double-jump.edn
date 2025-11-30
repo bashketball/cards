@@ -1,5 +1,0 @@
-{:slug "double-jump"
- :name "Double Jump"
- :set-slug "demo-set"
- :card-type :card-type/ABILITY_CARD
- :abilities ["May attempt a second shot if the first misses" "Once per game"]}
