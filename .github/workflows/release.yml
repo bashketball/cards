@@ -1,14 +1,13 @@
-name: Build and Release JAR
+name: Build and Publish JAR
 
 on:
-  release:
-    types: [published]
+  push:
+    branches: [main]
 
 jobs:
   build:
     runs-on: ubuntu-latest
     permissions:
-      contents: write
       packages: write
     steps:
       - uses: actions/checkout@v4
@@ -25,8 +24,3 @@ jobs:
           GITHUB_ACTOR: ${{ github.actor }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: clojure -T:build deploy
-
-      - name: Upload JAR to Release
-        uses: softprops/action-gh-release@v2
-        with:
-          files: target/cards-*.jar
