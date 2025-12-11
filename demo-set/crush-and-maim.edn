@@ -1,8 +1,0 @@
-{:slug "crush-and-maim"
- :name "Crush and Maim"
- :set-slug "demo-set"
- :card-type :card-type/SPLIT_PLAY_CARD
- :fate 2
- :offense "Flatten a defender and roll toward the hoop. +1 to shot for ball handler, +2 for the crusher if they receive the pass."
- :defense "Brace for impact or dodge aside. -1 to opposing shot if you have a big defender willing to take the hit."
- :image-prompt "A massive Troll setting a brutal screen, sending an opponent flying, while a teammate rolls to the bone-rimmed basket"}
