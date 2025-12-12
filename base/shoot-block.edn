@@ -1,0 +1,7 @@
+{:slug "shoot-block"
+ :name "Shoot / Block"
+ :set-slug "base"
+ :card-type :card-type/STANDARD_ACTION_CARD
+ :fate 2
+ :offense "Your player with the ball within 7 hexes of the basket attempts a Shot, then exhausts."
+ :defense "Target your player adjacent to an opponent within 4 hexes of the basket. That opponent must either attempt a Shot or exhaust and skip their next unexhaust. Your player exhausts."}
