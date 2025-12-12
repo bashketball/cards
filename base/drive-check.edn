@@ -2,6 +2,6 @@
  :name "Drive / Check"
  :set-slug "base"
  :card-type :card-type/STANDARD_ACTION_CARD
- :fate 1
+ :fate 4
  :offense "Your player with the ball within 4 hexes of the basket moves up to half their speed (ignoring ZoC), attempts a Shot, then exhausts."
  :defense "Move your player adjacent to an opponent within 2 hexes and attempt a Defensive Action. On success, exhaust both players; the opponent skips their next unexhaust. On failure, exhaust your player. If fate exceeds difficulty by 2+, attempt to Injure the opponent."}

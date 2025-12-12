@@ -2,6 +2,6 @@
  :name "Pass / Steal"
  :set-slug "base"
  :card-type :card-type/STANDARD_ACTION_CARD
- :fate 1
+ :fate 4
  :offense "Your player with the ball attempts a Pass to a teammate within 6 hexes, then exhausts."
  :defense "Move your player (within 2 hexes of an opponent with the ball) adjacent to that opponent and attempt a Defensive Action. If your player is SM and the opponent is MD or LG, gain +1. On failure, exhaust your player."}
