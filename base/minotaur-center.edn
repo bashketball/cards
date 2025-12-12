@@ -2,6 +2,7 @@
  :name "Minotaur Center"
  :set-slug "base"
  :card-type :card-type/PLAYER_CARD
+ :player-subtypes [:player/MINOTAUR]
  :deck-size 5
  :sht 2
  :pss 2

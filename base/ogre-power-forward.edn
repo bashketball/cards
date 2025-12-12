@@ -2,6 +2,7 @@
  :name "Ogre Power Forward"
  :set-slug "base"
  :card-type :card-type/PLAYER_CARD
+ :player-subtypes [:player/OGRE]
  :deck-size 4
  :sht 2
  :pss 1

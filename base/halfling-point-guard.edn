@@ -2,6 +2,7 @@
  :name "Halfling Point Guard"
  :set-slug "base"
  :card-type :card-type/PLAYER_CARD
+ :player-subtypes [:player/HALFLING]
  :deck-size 7
  :sht 2
  :pss 5
