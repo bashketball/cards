@@ -3,5 +3,5 @@
  :set-slug "base"
  :card-type :card-type/STANDARD_ACTION_CARD
  :fate 4
- :offense "Your player with the ball within 7 hexes of the basket attempts a Shot, then exhausts."
- :defense "Target your player adjacent to an opponent within 4 hexes of the basket. That opponent must either attempt a Shot or exhaust and skip their next unexhaust. Your player exhausts."}
+ :offense "Ball carrier within 7⬡ of basket attempts Shot, ↷."
+ :defense "Your player adjacent to opponent within 4⬡ of basket: Opponent must attempt Shot or ↷ and skip next unexhaust. You ↷."}
