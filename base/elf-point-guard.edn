@@ -2,7 +2,7 @@
  :name "Elf Point Guard"
  :set-slug "base"
  :card-type :card-type/PLAYER_CARD
- :player-subtypes [:player/ELF]
+ :player-subtypes [:player-subtype/ELF]
  :deck-size 6
  :sht 3
  :pss 4

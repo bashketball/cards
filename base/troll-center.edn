@@ -2,7 +2,7 @@
  :name "Troll Center"
  :set-slug "base"
  :card-type :card-type/PLAYER_CARD
- :player-subtypes [:player/TROLL]
+ :player-subtypes [:player-subtype/TROLL]
  :deck-size 4
  :sht 1
  :pss 1
