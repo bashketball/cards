@@ -1,7 +1,11 @@
-{:slug "drive-check"
- :name "Drive / Check"
- :set-slug "base"
- :card-type :card-type/STANDARD_ACTION_CARD
- :fate 4
- :offense "Ball carrier within 4⬡ of basket: Move up to half speed (ignore ZoC), attempt Shot, ↷."
- :defense "Engage opponent within 2⬡. Attempt Defend. ✓ Both ↷; opponent skips next unexhaust. ✗ You ↷. ✓+2 Attempt Injure."}
+{:updated-at #inst "2025-12-12T20:53:46.950439Z",
+ :slug "drive-check",
+ :offense
+ "Ball carrier within 4⬡ of basket: Move up to half speed (ignore ZoC), attempt Shot, ↷.",
+ :name "Drive / Check",
+ :card-type :card-type/STANDARD_ACTION_CARD,
+ :set-slug "base",
+ :fate 1,
+ :defense
+ "Engage opponent within 2⬡. Attempt Defend. ✓ Both ↷; opponent skips next unexhaust. ✗ You ↷. ✓+2 Attempt Injure.",
+ :created-at #inst "2025-12-12T14:31:53Z"}
