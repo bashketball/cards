@@ -23,7 +23,7 @@
 (def jar-file (format "target/%s-%s.jar" (name lib) version))
 
 ;; Card set directories to include in the JAR
-(def card-dirs ["base" "demo-set"])
+(def card-dirs ["base" "premiere"])
 
 (defn- copy-edn-files
   "Copy EDN files from card directories into target/classes/cards/"
