@@ -1,0 +1,7 @@
+{:slug "intense-pressure"
+ :name "Intense Pressure"
+ :set-slug "premiere"
+ :card-type :card-type/PLAY_CARD
+ :fate 3
+ :play "Choose an opponent in your player's ZoC. That opponent's next Shot or Pass attempt this turn is at an additional -2. Your player ↷."
+ :image-prompt "A troll looms over a panicked elf, arms up and blocking every angle, sweat dripping from both"}

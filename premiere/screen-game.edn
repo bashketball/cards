@@ -1,0 +1,7 @@
+{:slug "screen-game"
+ :name "Screen Game"
+ :set-slug "premiere"
+ :card-type :card-type/TEAM_ASSET_CARD
+ :fate 5
+ :asset-power "Passive: Your Screens also cancel ZoC of opponents within 2⬡ of the screener (not just adjacent)."
+ :image-prompt "An orc sets a pick so wide that three defenders are frozen in place, unable to help"}

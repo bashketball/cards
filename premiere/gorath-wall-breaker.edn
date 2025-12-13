@@ -7,7 +7,7 @@
  :card-type :card-type/PLAYER_CARD,
  :sht 2,
  :set-slug "premiere",
- :abilities [],
+ :abilities ["Immovable: When Gorath sets a Screen, opponents cannot move him with card effects."],
  :size :size/LG,
  :card-subtypes [:card-subtype/UNIQUE],
  :def 5,

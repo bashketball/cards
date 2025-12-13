@@ -7,7 +7,7 @@
  :card-type :card-type/PLAYER_CARD,
  :sht 3,
  :set-slug "premiere",
- :abilities [],
+ :abilities ["Lockdown Defender: Once per turn, when an opponent in Duran's ZoC attempts a Shot, you may discard a card to apply an additional -1 SHT."],
  :size :size/MD,
  :card-subtypes [:card-subtype/UNIQUE],
  :def 7,

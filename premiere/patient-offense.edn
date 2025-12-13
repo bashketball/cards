@@ -1,0 +1,7 @@
+{:slug "patient-offense"
+ :name "Patient Offense"
+ :set-slug "premiere"
+ :card-type :card-type/COACHING_CARD
+ :fate 5
+ :coaching "Draw 2 cards. One player with the ball may move up to 2⬡. Does not cause ↷."
+ :image-prompt "A human guard dribbles at the top of the key, eyes scanning, waiting for the perfect moment as teammates cut"}

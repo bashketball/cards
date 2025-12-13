@@ -1,0 +1,7 @@
+{:slug "passing-lane-denial"
+ :name "Passing Lane Denial"
+ :set-slug "premiere"
+ :card-type :card-type/PLAY_CARD
+ :fate 2
+ :play "Move one player up to 3⬡. Until end of your next turn, that player's ZoC applies an additional -2 to Passes."
+ :image-prompt "A dwarf slides into position with arms spread wide, cutting off the outlet pass before it can happen"}

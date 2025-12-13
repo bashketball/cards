@@ -1,0 +1,7 @@
+{:slug "motion-offense"
+ :name "Motion Offense"
+ :set-slug "premiere"
+ :card-type :card-type/TEAM_ASSET_CARD
+ :fate 4
+ :asset-power "Passive: After a successful Pass, the passer may move 1⬡. Does not cause ↷."
+ :image-prompt "A chalkboard diagram showing arrows flowing in continuous loops, players always in motion"}

@@ -7,7 +7,7 @@
  :card-type :card-type/PLAYER_CARD,
  :sht 6,
  :set-slug "premiere",
- :abilities [],
+ :abilities ["Killer Instinct: +1 SHT when shooting off a Screen."],
  :size :size/MD,
  :card-subtypes [:card-subtype/UNIQUE],
  :def 2,

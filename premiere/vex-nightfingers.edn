@@ -7,7 +7,7 @@
  :card-type :card-type/PLAYER_CARD,
  :sht 5,
  :set-slug "premiere",
- :abilities [],
+ :abilities ["Fast Break Artist: After your team gains possession from a turnover, Vex may immediately move up to 4⬡."],
  :size :size/MD,
  :card-subtypes [:card-subtype/UNIQUE],
  :def 3,
