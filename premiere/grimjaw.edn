@@ -1,13 +1,17 @@
-{:slug "grimjaw"
- :name "Grimjaw"
- :set-slug "premiere"
- :card-type :card-type/PLAYER_CARD
- :player-subtypes [:player-subtype/TROLL]
- :deck-size 6
- :sht 2
- :pss 1
- :def 5
- :speed 4
- :size :size/LG
- :abilities []
- :image-prompt "A towering troll with a jutting underbite clogging the lane, regenerating flesh visible through torn jersey, an impassable wall of muscle"}
+{:updated-at #inst "2025-12-13T19:27:09.471676Z",
+ :image-prompt
+ "A towering troll with a jutting underbite clogging the lane, regenerating flesh visible through torn jersey, an impassable wall of muscle",
+ :slug "grimjaw",
+ :speed 4,
+ :name "Grimjaw",
+ :card-type :card-type/PLAYER_CARD,
+ :sht 2,
+ :set-slug "premiere",
+ :abilities [],
+ :size :size/LG,
+ :card-subtypes [:card-subtype/UNIQUE],
+ :def 5,
+ :deck-size 6,
+ :player-subtypes [:player-subtype/TROLL],
+ :pss 1,
+ :created-at #inst "2025-12-13T19:22:08Z"}

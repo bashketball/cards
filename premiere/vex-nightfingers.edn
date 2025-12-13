@@ -1,13 +1,17 @@
-{:slug "vex-nightfingers"
- :name "Vex Nightfingers"
- :set-slug "premiere"
- :card-type :card-type/PLAYER_CARD
- :player-subtypes [:player-subtype/DARK_ELF]
- :deck-size 7
- :sht 5
- :pss 5
- :def 3
- :speed 6
- :size :size/MD
- :abilities []
- :image-prompt "A sleek dark elf with obsidian skin and silver hair streaking down the court in transition, ball dancing between deadly fingers"}
+{:updated-at #inst "2025-12-13T19:27:04.099944Z",
+ :image-prompt
+ "A sleek dark elf with obsidian skin and silver hair streaking down the court in transition, ball dancing between deadly fingers",
+ :slug "vex-nightfingers",
+ :speed 6,
+ :name "Vex Nightfingers",
+ :card-type :card-type/PLAYER_CARD,
+ :sht 5,
+ :set-slug "premiere",
+ :abilities [],
+ :size :size/MD,
+ :card-subtypes [:card-subtype/UNIQUE],
+ :def 3,
+ :deck-size 7,
+ :player-subtypes [:player-subtype/DARK_ELF],
+ :pss 5,
+ :created-at #inst "2025-12-13T19:22:08Z"}

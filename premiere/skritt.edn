@@ -1,13 +1,17 @@
-{:slug "skritt"
- :name "Skritt"
- :set-slug "premiere"
- :card-type :card-type/PLAYER_CARD
- :player-subtypes [:player-subtype/GOBLIN]
- :deck-size 4
- :sht 2
- :pss 4
- :def 2
- :speed 7
- :size :size/SM
- :abilities []
- :image-prompt "A scrawny goblin speedster darting across the court, all nervous energy and twitchy movement, looking for any opening"}
+{:updated-at #inst "2025-12-13T19:24:37.629242Z",
+ :image-prompt
+ "A scrawny goblin speedster darting across the court, all nervous energy and twitchy movement, looking for any opening",
+ :slug "skritt",
+ :speed 7,
+ :name "Skritt",
+ :card-type :card-type/PLAYER_CARD,
+ :sht 2,
+ :set-slug "premiere",
+ :abilities [],
+ :size :size/SM,
+ :card-subtypes [:card-subtype/UNIQUE],
+ :def 2,
+ :deck-size 4,
+ :player-subtypes [:player-subtype/GOBLIN],
+ :pss 4,
+ :created-at #inst "2025-12-13T19:22:08Z"}

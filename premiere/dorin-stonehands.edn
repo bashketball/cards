@@ -1,13 +1,17 @@
-{:slug "dorin-stonehands"
- :name "Dorin Stonehands"
- :set-slug "premiere"
- :card-type :card-type/PLAYER_CARD
- :player-subtypes [:player-subtype/DWARF]
- :deck-size 5
- :sht 3
- :pss 3
- :def 5
- :speed 5
- :size :size/MD
- :abilities []
- :image-prompt "A stocky dwarf with calloused hands in defensive stance, beard braided tight, ready to lock down any opponent"}
+{:updated-at #inst "2025-12-13T19:24:23.866608Z",
+ :image-prompt
+ "A stocky dwarf with calloused hands in defensive stance, beard braided tight, ready to lock down any opponent",
+ :slug "dorin-stonehands",
+ :speed 5,
+ :name "Dorin Stonehands",
+ :card-type :card-type/PLAYER_CARD,
+ :sht 3,
+ :set-slug "premiere",
+ :abilities [],
+ :size :size/MD,
+ :card-subtypes [:card-subtype/UNIQUE],
+ :def 5,
+ :deck-size 5,
+ :player-subtypes [:player-subtype/DWARF],
+ :pss 3,
+ :created-at #inst "2025-12-13T19:22:08Z"}

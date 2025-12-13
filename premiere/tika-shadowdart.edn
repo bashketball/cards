@@ -1,13 +1,17 @@
-{:slug "tika-shadowdart"
- :name "Tika Shadowdart"
- :set-slug "premiere"
- :card-type :card-type/PLAYER_CARD
- :player-subtypes [:player-subtype/GOBLIN]
- :deck-size 5
- :sht 3
- :pss 5
- :def 1
- :speed 8
- :size :size/SM
- :abilities []
- :image-prompt "A lightning-fast goblin point guard threading passes through traffic, ball a blur in nimble green fingers, wicked grin on her face"}
+{:updated-at #inst "2025-12-13T19:27:15.885529Z",
+ :image-prompt
+ "A lightning-fast goblin point guard threading passes through traffic, ball a blur in nimble green fingers, wicked grin on her face",
+ :slug "tika-shadowdart",
+ :speed 8,
+ :name "Tika Shadowdart",
+ :card-type :card-type/PLAYER_CARD,
+ :sht 3,
+ :set-slug "premiere",
+ :abilities [],
+ :size :size/SM,
+ :card-subtypes [:card-subtype/UNIQUE],
+ :def 1,
+ :deck-size 5,
+ :player-subtypes [:player-subtype/GOBLIN],
+ :pss 5,
+ :created-at #inst "2025-12-13T19:22:08Z"}
