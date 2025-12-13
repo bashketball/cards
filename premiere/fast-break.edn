@@ -1,0 +1,10 @@
+{:updated-at #inst "2025-12-13T19:19:36.952696Z",
+ :image-prompt "A goblin charges down the court.",
+ :slug "fast-break",
+ :name "Fast break",
+ :card-type :card-type/PLAY_CARD,
+ :set-slug "premiere",
+ :fate 3,
+ :play
+ "Move player up to their speed even if exhausted. Attempt a Shot at -1. ↷. skip next unexhaust.",
+ :created-at #inst "2025-12-13T19:19:36.952696Z"}
