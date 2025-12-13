@@ -1,0 +1,13 @@
+{:slug "grimjaw"
+ :name "Grimjaw"
+ :set-slug "premiere"
+ :card-type :card-type/PLAYER_CARD
+ :player-subtypes [:player-subtype/TROLL]
+ :deck-size 6
+ :sht 2
+ :pss 1
+ :def 5
+ :speed 4
+ :size :size/LG
+ :abilities []
+ :image-prompt "A towering troll with a jutting underbite clogging the lane, regenerating flesh visible through torn jersey, an impassable wall of muscle"}

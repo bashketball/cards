@@ -1,0 +1,13 @@
+{:slug "duran-ironroot"
+ :name "Duran Ironroot"
+ :set-slug "premiere"
+ :card-type :card-type/PLAYER_CARD
+ :player-subtypes [:player-subtype/DWARF]
+ :deck-size 8
+ :sht 3
+ :pss 2
+ :def 7
+ :speed 5
+ :size :size/MD
+ :abilities []
+ :image-prompt "An immovable dwarf defender with arms like oak branches, stance planted like roots in stone, shutting down all who approach"}

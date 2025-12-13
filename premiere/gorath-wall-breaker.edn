@@ -1,0 +1,13 @@
+{:slug "gorath-wall-breaker"
+ :name "Gorath Wall-Breaker"
+ :set-slug "premiere"
+ :card-type :card-type/PLAYER_CARD
+ :player-subtypes [:player-subtype/ORC]
+ :deck-size 6
+ :sht 2
+ :pss 2
+ :def 5
+ :speed 4
+ :size :size/LG
+ :abilities []
+ :image-prompt "A hulking orc with scarred green skin setting a devastating pick, arms wide like battering rams, daring defenders to go through him"}

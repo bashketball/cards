@@ -1,0 +1,13 @@
+{:slug "brennan-quickstep"
+ :name "Brennan Quickstep"
+ :set-slug "premiere"
+ :card-type :card-type/PLAYER_CARD
+ :player-subtypes [:player-subtype/HUMAN]
+ :deck-size 7
+ :sht 6
+ :pss 4
+ :def 2
+ :speed 6
+ :size :size/MD
+ :abilities []
+ :image-prompt "A nimble human guard with quick feet, mid-drive around a screen, eyes locked on the basket with killer instinct"}
