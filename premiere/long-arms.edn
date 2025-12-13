@@ -1,0 +1,10 @@
+{:image-prompt
+ "A goblin with tentacle like arms guarding a much taller Troll.",
+ :name "Long Arms",
+ :fate 4
+ :abilities ["Players ZoC is 2⬡"],
+ :set-slug "premiere",
+ :slug "long-arms",
+ :card-type :card-type/ABILITY_CARD,
+ :created-at #inst "2025-12-13T19:00:36.928829Z",
+ :updated-at #inst "2025-12-13T19:00:36.928829Z"}

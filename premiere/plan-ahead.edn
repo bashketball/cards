@@ -1,0 +1,11 @@
+{:updated-at #inst "2025-12-13T18:32:40.245956Z",
+ :image-prompt
+ "A coach in a timeout huddle surrounded by her players gestures at her clipboard.",
+ :slug "plan-ahead",
+ :coaching
+ "Draw a card. Look at the top card of your deck you may leave it on top or discard it. ",
+ :name "Plan Ahead",
+ :card-type :card-type/COACHING_CARD,
+ :set-slug "premiere",
+ :fate 8,
+ :created-at #inst "2025-12-13T18:32:19.138677Z"}

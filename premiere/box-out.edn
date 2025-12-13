@@ -1,0 +1,11 @@
+{:updated-at #inst "2025-12-13T18:35:30.584655Z",
+ :image-prompt
+ "A human braces himself against a troll twice his height. ",
+ :slug "box-out",
+ :name "Box out",
+ :card-type :card-type/PLAY_CARD,
+ :set-slug "premiere",
+ :fate 5,
+ :play
+ "Move a player 2⬡. That player gains +1 DEF until the end of turn. If the ball is loose they may move again up to 2⬡.",
+ :created-at #inst "2025-12-13T18:35:30.584655Z"}

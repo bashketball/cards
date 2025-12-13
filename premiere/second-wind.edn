@@ -1,0 +1,8 @@
+{:name "Second Wind",
+ :fate 7,
+ :play "Unexhaust target player.",
+ :set-slug "premiere",
+ :slug "second-wind",
+ :card-type :card-type/PLAY_CARD,
+ :created-at #inst "2025-12-13T19:16:14.718347Z",
+ :updated-at #inst "2025-12-13T19:16:14.718347Z"}

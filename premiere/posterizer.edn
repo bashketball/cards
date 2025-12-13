@@ -1,0 +1,11 @@
+{:updated-at #inst "2025-12-13T18:59:01.122786Z",
+ :image-prompt
+ "A Dwarf flys to the rim, beard streaming behind his foot planted on the face of an elf defender.",
+ :slug "posterizer",
+ :name "Posterizer",
+ :card-type :card-type/PLAY_CARD,
+ :set-slug "premiere",
+ :fate 0,
+ :play
+ "Ball carrier within 3⬡ of basket: Move adjacent, attempt Shot at +3 SHT. ↷. If successful, adjacent defender skips next unexhaust.",
+ :created-at #inst "2025-12-13T18:59:01.122786Z"}

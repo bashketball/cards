@@ -1,0 +1,11 @@
+{:updated-at #inst "2025-12-13T18:40:20.419939Z",
+ :image-prompt
+ "An Orc Strength coach looms over a goblin doing a bench press shouting. ",
+ :slug "hrongar-s-workout-plan",
+ :name "Hrongar's Workout Plan",
+ :card-type :card-type/TEAM_ASSET_CARD,
+ :set-slug "premiere",
+ :fate 4,
+ :created-at #inst "2025-12-13T18:40:20.419939Z",
+ :asset-power
+ "Passive: Reduce size penalties for SM players on Defense by 1. "}

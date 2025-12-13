@@ -1,0 +1,10 @@
+{:updated-at #inst "2025-12-13T19:04:14.191719Z",
+ :image-prompt
+ "A cheery elf wearing sweat bands leads a class of exhausted orcs on bicycles.",
+ :slug "conditioning-coach",
+ :name "Conditioning Coach",
+ :card-type :card-type/TEAM_ASSET_CARD,
+ :set-slug "premiere",
+ :fate 4,
+ :created-at #inst "2025-12-13T19:04:14.191719Z",
+ :asset-power "Passive: LG players get +1 Speed."}

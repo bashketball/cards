@@ -1,0 +1,11 @@
+{:updated-at #inst "2025-12-13T19:03:13.293191Z",
+ :image-prompt
+ "An elf puts up a shot over the head of a screened defender.",
+ :slug "pick-n-pop",
+ :name "Pick 'n' Pop",
+ :card-type :card-type/PLAY_CARD,
+ :set-slug "premiere",
+ :fate 2,
+ :play
+ "Move one player to set a Screen. Ball carrier may attempt Shot at +1 SHT. Both ↷.",
+ :created-at #inst "2025-12-13T19:03:13.293191Z"}

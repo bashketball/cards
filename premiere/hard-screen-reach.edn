@@ -1,0 +1,12 @@
+{:updated-at #inst "2025-12-13T18:57:41.977360Z",
+ :image-prompt
+ "One half a giant Elf flattens a dwarfs on a screen. Other half a long limbed Orc takes a defensive position",
+ :slug "hard-screen-reach",
+ :offense
+ "Move a player 3⬡ ↷. If adjacent to an opponent take a Defensive Action. ✓ Opponent ↷ skips next exhaust. ✓+2 attempt to Injure.",
+ :name "Hard Screen / Reach",
+ :card-type :card-type/SPLIT_PLAY_CARD,
+ :set-slug "premiere",
+ :fate 3,
+ :defense "Until the next end of your next turn. Player's ZoC is 2⬡.",
+ :created-at #inst "2025-12-13T18:57:41.977360Z"}
