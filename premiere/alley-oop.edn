@@ -1,0 +1,7 @@
+{:slug "alley-oop"
+ :name "Alley-Oop"
+ :set-slug "premiere"
+ :card-type :card-type/PLAY_CARD
+ :fate 1
+ :play "Ball carrier attempts Pass to teammate within 4⬡ of basket. If successful, receiver immediately attempts Shot at +2 SHT (ignores adjacent defenders). Both players ↷."
+ :image-prompt "A goblin lobs the ball high as an orc leaps above two defenders, about to hammer it home"}

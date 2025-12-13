@@ -1,0 +1,8 @@
+{:slug "back-door-cut"
+ :name "Back Door Cut"
+ :set-slug "premiere"
+ :card-type :card-type/TEAM_ASSET_CARD
+ :subtype :asset-subtype/RESPONSE
+ :fate 3
+ :asset-power "Play face-down. Response: After your player sets a Screen, reveal and discard this card. Another player may move up to 4⬡ toward the basket and immediately receive a Pass attempt at +1 PSS."
+ :image-prompt "A human cuts behind a distracted defender while an orc holds a crushing screen, the ball already in flight"}

@@ -1,0 +1,8 @@
+{:slug "deny-the-entry"
+ :name "Deny the Entry"
+ :set-slug "premiere"
+ :card-type :card-type/TEAM_ASSET_CARD
+ :subtype :asset-subtype/RESPONSE
+ :fate 4
+ :asset-power "Play face-down. Response: When an opponent attempts a Pass to a player within your player's ZoC, reveal and discard this card. Your player may attempt a Steal at +2 DEF before the Pass resolves."
+ :image-prompt "A troll's massive arm shoots out to intercept a pass, the intended receiver's eyes going wide"}

@@ -1,0 +1,7 @@
+{:slug "stay-in-front"
+ :name "Stay in Front"
+ :set-slug "premiere"
+ :card-type :card-type/PLAY_CARD
+ :fate 6
+ :play "Create a Team Asset with Response: When an opponent moves out of your player's ZoC, that player may move up to 2⬡ to follow. Does not cause ↷. Discard after use."
+ :image-prompt "A dwarf shuffles sideways in perfect defensive stance, mirroring every juke of the frustrated ball handler"}

@@ -1,0 +1,7 @@
+{:slug "lockdown"
+ :name "Lockdown"
+ :set-slug "premiere"
+ :card-type :card-type/PLAY_CARD
+ :fate 1
+ :play "Choose an opponent. Until end of your next turn, that player's Speed is halved and they cannot receive passes. If they have the ball, they must immediately attempt Pass or Shot or lose possession."
+ :image-prompt "A dwarf defender shadows an elf so closely their shadows merge, the elf's eyes wide with panic"}
