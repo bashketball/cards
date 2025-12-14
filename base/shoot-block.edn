@@ -1,9 +1,10 @@
-{:updated-at #inst "2025-12-12T20:53:54.136460Z",
+{:updated-at #inst "2025-12-14T04:02:08.283865Z",
  :slug "shoot-block",
  :offense "Ball carrier within 7⬡ of basket attempts Shot, ↷.",
  :name "Shoot / Block",
  :card-type :card-type/STANDARD_ACTION_CARD,
  :set-slug "base",
+ :card-subtypes [:card-subtype/BASIC],
  :fate 3,
  :defense
  "Your player adjacent to opponent within 4⬡ of basket: Opponent must attempt Shot or ↷ and skip next unexhaust. You ↷.",

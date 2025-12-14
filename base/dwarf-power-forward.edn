@@ -1,13 +1,17 @@
-{:slug "dwarf-power-forward"
- :name "Dwarf Power Forward"
- :set-slug "base"
- :card-type :card-type/PLAYER_CARD
- :player-subtypes [:player-subtype/DWARF]
- :deck-size 5
- :sht 3
- :pss 2
- :def 4
- :speed 2
- :size :size/MD
- :abilities []
- :image-prompt "A stocky bearded dwarf setting a brutal screen, braided beard tucked into jersey, low center of gravity"}
+{:updated-at #inst "2025-12-14T04:00:35.800799Z",
+ :image-prompt
+ "A stocky bearded dwarf setting a brutal screen, braided beard tucked into jersey, low center of gravity",
+ :slug "dwarf-power-forward",
+ :speed 2,
+ :name "Dwarf Power Forward",
+ :card-type :card-type/PLAYER_CARD,
+ :sht 3,
+ :set-slug "base",
+ :abilities [],
+ :size :size/MD,
+ :card-subtypes [:card-subtype/BASIC],
+ :def 4,
+ :deck-size 5,
+ :player-subtypes [:player-subtype/DWARF],
+ :pss 2,
+ :created-at #inst "2025-11-29T05:31:58Z"}

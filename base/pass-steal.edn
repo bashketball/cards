@@ -1,9 +1,10 @@
-{:updated-at #inst "2025-12-12T20:53:39.209808Z",
+{:updated-at #inst "2025-12-14T04:01:34.923570Z",
  :slug "pass-steal",
  :offense "Ball carrier attempts Pass to teammate within 6⬡, ↷.",
  :name "Pass / Steal",
  :card-type :card-type/STANDARD_ACTION_CARD,
  :set-slug "base",
+ :card-subtypes [:card-subtype/BASIC],
  :fate 3,
  :defense
  "Engage ball carrier within 2⬡. Attempt Defend. SM vs MD/LG: +1. ✓ You take the ball. ✗ You ↷.",

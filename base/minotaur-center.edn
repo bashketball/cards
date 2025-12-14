@@ -1,13 +1,17 @@
-{:slug "minotaur-center"
- :name "Minotaur Center"
- :set-slug "base"
- :card-type :card-type/PLAYER_CARD
- :player-subtypes [:player-subtype/MINOTAUR]
- :deck-size 5
- :sht 2
- :pss 2
- :def 4
- :speed 3
- :size :size/LG
- :abilities []
- :image-prompt "A bull-headed minotaur with massive horns setting devastating screens, steam snorting from nostrils"}
+{:updated-at #inst "2025-12-14T04:01:48.206579Z",
+ :image-prompt
+ "A bull-headed minotaur with massive horns setting devastating screens, steam snorting from nostrils",
+ :slug "minotaur-center",
+ :speed 3,
+ :name "Minotaur Center",
+ :card-type :card-type/PLAYER_CARD,
+ :sht 2,
+ :set-slug "base",
+ :abilities [],
+ :size :size/LG,
+ :card-subtypes [:card-subtype/BASIC],
+ :def 4,
+ :deck-size 5,
+ :player-subtypes [:player-subtype/MINOTAUR],
+ :pss 2,
+ :created-at #inst "2025-11-29T05:31:58Z"}

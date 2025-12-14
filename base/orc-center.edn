@@ -1,13 +1,17 @@
-{:slug "orc-center"
- :name "Orc Center"
- :set-slug "base"
- :card-type :card-type/PLAYER_CARD
- :player-subtypes [:player-subtype/ORC]
- :deck-size 5
- :sht 2
- :pss 1
- :def 4
- :speed 2
- :size :size/LG
- :abilities []
- :image-prompt "A massive green-skinned orc in basketball gear, tusks protruding, ready to block shots under the hoop"}
+{:updated-at #inst "2025-12-14T04:02:03.813817Z",
+ :image-prompt
+ "A massive green-skinned orc in basketball gear, tusks protruding, ready to block shots under the hoop",
+ :slug "orc-center",
+ :speed 2,
+ :name "Orc Center",
+ :card-type :card-type/PLAYER_CARD,
+ :sht 2,
+ :set-slug "base",
+ :abilities [],
+ :size :size/LG,
+ :card-subtypes [:card-subtype/BASIC],
+ :def 4,
+ :deck-size 5,
+ :player-subtypes [:player-subtype/ORC],
+ :pss 1,
+ :created-at #inst "2025-11-29T05:31:58Z"}

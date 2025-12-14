@@ -1,13 +1,17 @@
-{:slug "human-small-forward"
- :name "Human Small Forward"
- :set-slug "base"
- :card-type :card-type/PLAYER_CARD
- :player-subtypes [:player-subtype/HUMAN]
- :deck-size 6
- :sht 3
- :pss 3
- :def 3
- :speed 3
- :size :size/MD
- :abilities []
- :image-prompt "An athletic human player in classic basketball form, the baseline against which all fantasy creatures are measured"}
+{:updated-at #inst "2025-12-14T04:00:44.379378Z",
+ :image-prompt
+ "An athletic human player in classic basketball form, the baseline against which all fantasy creatures are measured",
+ :slug "human-small-forward",
+ :speed 3,
+ :name "Human Small Forward",
+ :card-type :card-type/PLAYER_CARD,
+ :sht 3,
+ :set-slug "base",
+ :abilities [],
+ :size :size/MD,
+ :card-subtypes [:card-subtype/BASIC],
+ :def 3,
+ :deck-size 6,
+ :player-subtypes [:player-subtype/HUMAN],
+ :pss 3,
+ :created-at #inst "2025-11-29T05:31:58Z"}

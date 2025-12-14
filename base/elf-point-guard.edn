@@ -1,13 +1,17 @@
-{:slug "elf-point-guard"
- :name "Elf Point Guard"
- :set-slug "base"
- :card-type :card-type/PLAYER_CARD
- :player-subtypes [:player-subtype/ELF]
- :deck-size 6
- :sht 3
- :pss 4
- :def 2
- :speed 5
- :size :size/SM
- :abilities []
- :image-prompt "A graceful elf with pointed ears dribbling a basketball with supernatural agility, flowing hair trailing behind"}
+{:updated-at #inst "2025-12-14T04:00:30.591013Z",
+ :image-prompt
+ "A graceful elf with pointed ears dribbling a basketball with supernatural agility, flowing hair trailing behind",
+ :slug "elf-point-guard",
+ :speed 5,
+ :name "Elf Point Guard",
+ :card-type :card-type/PLAYER_CARD,
+ :sht 3,
+ :set-slug "base",
+ :abilities [],
+ :size :size/SM,
+ :card-subtypes [:card-subtype/BASIC],
+ :def 2,
+ :deck-size 6,
+ :player-subtypes [:player-subtype/ELF],
+ :pss 4,
+ :created-at #inst "2025-11-29T05:31:58Z"}

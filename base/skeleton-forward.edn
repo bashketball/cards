@@ -1,13 +1,17 @@
-{:slug "skeleton-forward"
- :name "Skeleton Forward"
- :set-slug "base"
- :card-type :card-type/PLAYER_CARD
- :player-subtypes [:player-subtype/SKELETON]
- :deck-size 6
- :sht 3
- :pss 2
- :def 3
- :speed 3
- :size :size/MD
- :abilities []
- :image-prompt "An animated skeleton in a tattered jersey, empty eye sockets glowing, bones rattling as it drives to the basket"}
+{:updated-at #inst "2025-12-14T04:01:16.658854Z",
+ :image-prompt
+ "An animated skeleton in a tattered jersey, empty eye sockets glowing, bones rattling as it drives to the basket",
+ :slug "skeleton-forward",
+ :speed 3,
+ :name "Skeleton Forward",
+ :card-type :card-type/PLAYER_CARD,
+ :sht 3,
+ :set-slug "base",
+ :abilities [],
+ :size :size/MD,
+ :card-subtypes [:card-subtype/BASIC],
+ :def 3,
+ :deck-size 6,
+ :player-subtypes [:player-subtype/SKELETON],
+ :pss 2,
+ :created-at #inst "2025-11-29T05:31:58Z"}

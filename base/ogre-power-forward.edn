@@ -1,13 +1,17 @@
-{:slug "ogre-power-forward"
- :name "Ogre Power Forward"
- :set-slug "base"
- :card-type :card-type/PLAYER_CARD
- :player-subtypes [:player-subtype/OGRE]
- :deck-size 4
- :sht 2
- :pss 1
- :def 4
- :speed 2
- :size :size/LG
- :abilities []
- :image-prompt "A hulking one-eyed ogre posting up aggressively, small jersey stretched tight over massive frame"}
+{:updated-at #inst "2025-12-14T04:01:40.341386Z",
+ :image-prompt
+ "A hulking one-eyed ogre posting up aggressively, small jersey stretched tight over massive frame",
+ :slug "ogre-power-forward",
+ :speed 2,
+ :name "Ogre Power Forward",
+ :card-type :card-type/PLAYER_CARD,
+ :sht 2,
+ :set-slug "base",
+ :abilities [],
+ :size :size/LG,
+ :card-subtypes [:card-subtype/BASIC],
+ :def 4,
+ :deck-size 4,
+ :player-subtypes [:player-subtype/OGRE],
+ :pss 1,
+ :created-at #inst "2025-11-29T05:31:58Z"}
