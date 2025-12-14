@@ -22,20 +22,24 @@
 (def class-dir "target/classes")
 (def jar-file (format "target/%s-%s.jar" (name lib) version))
 
-;; Card set directories to include in the JAR
-(def card-dirs ["base" "premiere"])
+(defn- discover-card-dirs
+  "Find all directories containing a metadata.edn file"
+  []
+  (->> (.listFiles (io/file "."))
+       (filter #(.isDirectory %))
+       (filter #(.exists (io/file % "metadata.edn")))
+       (map #(.getName %))))
 
 (defn- copy-edn-files
   "Copy EDN files from card directories into target/classes/cards/"
   []
-  (doseq [dir card-dirs]
+  (doseq [dir (discover-card-dirs)]
     (let [src-dir (io/file dir)
           dest-dir (io/file class-dir "cards" dir)]
-      (when (.exists src-dir)
-        (.mkdirs dest-dir)
-        (doseq [f (.listFiles src-dir)]
-          (when (.endsWith (.getName f) ".edn")
-            (io/copy f (io/file dest-dir (.getName f)))))))))
+      (.mkdirs dest-dir)
+      (doseq [f (.listFiles src-dir)]
+        (when (.endsWith (.getName f) ".edn")
+          (io/copy f (io/file dest-dir (.getName f))))))))
 
 (defn clean [_]
   (b/delete {:path "target"}))
