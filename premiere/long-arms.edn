@@ -1,7 +1,7 @@
 {:image-prompt
  "A goblin with tentacle like arms guarding a much taller Troll.",
  :name "Long Arms",
- :fate 4
+ :fate 3
  :abilities ["Players ZoC is 2⬡"],
  :set-slug "premiere",
  :slug "long-arms",

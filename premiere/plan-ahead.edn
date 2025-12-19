@@ -2,8 +2,8 @@
  :image-prompt
  "A coach in a timeout huddle surrounded by her players gestures at her clipboard.",
  :slug "plan-ahead",
- :coaching
- "Draw a card. Look at the top card of your deck you may leave it on top or discard it. ",
+ :coaching "Draw a card. Look at the top card of your deck you may leave it on top or discard it."
+ :signal "Look at the top card of your deck.",
  :name "Plan Ahead",
  :card-type :card-type/COACHING_CARD,
  :set-slug "premiere",

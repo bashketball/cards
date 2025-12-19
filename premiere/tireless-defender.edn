@@ -2,6 +2,6 @@
  :name "Tireless Defender"
  :set-slug "premiere"
  :card-type :card-type/ABILITY_CARD
- :fate 2
+ :fate 0
  :abilities ["This player exerts ZoC even while exhausted."]
  :image-prompt "A sweat-drenched dwarf in a defensive stance, exhausted but refusing to give ground, eyes locked on the ball handler"}

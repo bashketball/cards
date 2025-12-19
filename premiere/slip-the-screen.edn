@@ -4,4 +4,5 @@
  :card-type :card-type/COACHING_CARD
  :fate 6
  :coaching "Play after your player attempts a Screen. That player may move 2⬡ toward the basket. Does not cause ↷."
+ :signal "+1 DEF to next Screen."
  :image-prompt "An orc who just set a pick rolls hard to the basket, leaving his bewildered mark behind"}

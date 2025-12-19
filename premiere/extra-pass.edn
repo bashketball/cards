@@ -4,4 +4,5 @@
  :card-type :card-type/COACHING_CARD
  :fate 8
  :coaching "After a successful Pass, draw a card. The receiver may immediately attempt another Pass without ↷."
+ :signal "+1 PSS to next Pass."
  :image-prompt "A goblin catches and whips the ball across court in one motion, the defense scrambling to rotate"}

@@ -7,5 +7,5 @@
  :card-subtypes [:card-subtype/BASIC],
  :fate 3,
  :defense
- "Engage ball carrier within 2⬡. Attempt Defend. SM vs MD/LG: +1. ✓ You take the ball. ✗ You ↷.",
+ "Engage ball carrier within 2⬡. Attempt Defend-2. SM defender ignores size Disadvantage. ✓ You take the ball. ✗ You ↷.",
  :created-at #inst "2025-11-29T05:31:58Z"}

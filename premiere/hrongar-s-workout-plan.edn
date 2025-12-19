@@ -7,5 +7,4 @@
  :set-slug "premiere",
  :fate 4,
  :created-at #inst "2025-12-13T18:40:20.419939Z",
- :asset-power
- "Passive: Reduce size penalties for SM players on Defense by 1. "}
+ :asset-power "Passive: Your SM players are treated as same size when targeted by defensive actions."}

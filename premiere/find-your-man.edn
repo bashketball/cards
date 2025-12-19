@@ -1,7 +1,8 @@
 {:updated-at #inst "2025-12-13T19:12:35.016022Z",
  :image-prompt "A dwarf coach shouts at her team. ",
  :slug "find-your-man",
- :coaching "Move a player 3⬡ do not ↷.",
+ :coaching "Move a player 3⬡ do not ↷."
+ :signal "Move a player 1⬡.",
  :name "Find your Man(?)",
  :card-type :card-type/COACHING_CARD,
  :set-slug "premiere",

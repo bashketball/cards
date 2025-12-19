@@ -3,5 +3,5 @@
  :set-slug "premiere"
  :card-type :card-type/TEAM_ASSET_CARD
  :fate 5
- :asset-power "Passive: Your players' ZoC applies an additional -1 to Shots."
+ :asset-power "Passive: Your SM players' ZoC affects Shots as if same size."
  :image-prompt "A coach points at a tactical board covered in red X marks and defensive rotations"}

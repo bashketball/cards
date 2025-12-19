@@ -46,9 +46,20 @@
 
 (def pom-file (str class-dir "/META-INF/maven/io.github.bashketball/cards/pom.xml"))
 
+(defn- copy-starter-decks
+  "Copy starter-decks.edn into target/classes/cards/"
+  []
+  (let [src (io/file "starter-decks.edn")
+        dest-dir (io/file class-dir "cards")
+        dest (io/file dest-dir "starter-decks.edn")]
+    (when (.exists src)
+      (.mkdirs dest-dir)
+      (io/copy src dest))))
+
 (defn jar [_]
   (clean nil)
   (copy-edn-files)
+  (copy-starter-decks)
   (b/write-pom {:class-dir class-dir
                 :lib lib
                 :version version

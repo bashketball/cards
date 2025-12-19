@@ -4,4 +4,5 @@
  :card-type :card-type/COACHING_CARD
  :fate 8
  :coaching "Draw a card. Look at the top 2 cards of your opponent's deck. You may put them back in any order."
+ :signal "Look at the top card of your opponent's deck."
  :image-prompt "A troll squints at a crystal ball showing ghostly replays while a goblin takes notes furiously"}
