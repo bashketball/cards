@@ -7,7 +7,15 @@
  :card-type :card-type/PLAYER_CARD,
  :sht 5,
  :set-slug "premiere",
- :abilities ["Fast Break Artist: After your team gains possession from a turnover, Vex may immediately move up to 4⬡."],
+ :abilities [{:ability/id "fast-break-artist"
+             :ability/name "Fast Break Artist"
+             :ability/description "After your team gains possession from a turnover, Vex may immediately move up to 4⬡."
+             :ability/trigger {:trigger/event :bashketball/turnover.after
+                               :trigger/condition [:= :event/gaining-team :self/team]}
+             :ability/effect {:effect/type :bashketball/optional
+                              :optional/effect {:effect/type :bashketball/move-player
+                                                :move/player-id :self/id
+                                                :move/max-distance 4}}}],
  :size :size/MD,
  :card-subtypes [:card-subtype/UNIQUE],
  :def 3,

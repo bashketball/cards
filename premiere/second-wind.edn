@@ -1,6 +1,10 @@
 {:name "Second Wind",
  :fate 7,
- :play "Unexhaust target player.",
+ :play {:play/id "second-wind"
+       :play/description "Unexhaust target player."
+       :play/targets [:target/player-id]
+       :play/effect {:effect/type :bashketball/refresh-player
+                     :refresh/player-id :target/player-id}},
  :set-slug "premiere",
  :slug "second-wind",
  :card-type :card-type/PLAY_CARD,

@@ -7,7 +7,17 @@
  :card-type :card-type/PLAYER_CARD,
  :sht 6,
  :set-slug "premiere",
- :abilities ["Killer Instinct: +1 SHT when shooting off a Screen."],
+ :abilities [{:ability/id "killer-instinct"
+             :ability/name "Killer Instinct"
+             :ability/description "+1 SHT when shooting off a Screen."
+             :ability/trigger {:trigger/event :bashketball/shoot.before
+                               :trigger/condition [:and
+                                                   [:= :event/shooter-id :self/id]
+                                                   [:bashketball/shooting-off-screen? :doc/state :self/id]]}
+             :ability/effect {:effect/type :bashketball/add-modifier
+                              :modifier/stat :sht
+                              :modifier/value 1
+                              :modifier/duration :until-resolved}}],
  :size :size/MD,
  :card-subtypes [:card-subtype/UNIQUE],
  :def 2,

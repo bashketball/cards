@@ -3,6 +3,20 @@
  :set-slug "premiere"
  :card-type :card-type/COACHING_CARD
  :fate 5
- :coaching "Draw 2 cards. One player with the ball may move up to 2⬡. Does not cause ↷."
- :signal "Draw 1 card."
+ :call {:call/id "patient-offense-call"
+       :call/description "Draw 2 cards. One player with the ball may move up to 2⬡. Does not cause ↷."
+       :call/effect {:effect/type :bashketball/sequence
+                     :sequence/effects [{:effect/type :bashketball/draw-cards
+                                         :draw/count 2}
+                                        {:effect/type :bashketball/optional
+                                         :optional/requires [:bashketball/has-ball? :doc/state :target/player-id]
+                                         :optional/targets [:target/player-id]
+                                         :optional/effect {:effect/type :bashketball/move-player
+                                                           :move/player-id :target/player-id
+                                                           :move/max-distance 2
+                                                           :move/no-exhaust true}}]}}
+ :signal {:signal/id "patient-offense-signal"
+          :signal/description "Draw 1 card."
+          :signal/effect {:effect/type :bashketball/draw-cards
+                          :draw/count 1}}
  :image-prompt "A human guard dribbles at the top of the key, eyes scanning, waiting for the perfect moment as teammates cut"}

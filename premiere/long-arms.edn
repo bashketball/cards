@@ -2,7 +2,12 @@
  "A goblin with tentacle like arms guarding a much taller Troll.",
  :name "Long Arms",
  :fate 3
- :abilities ["Players ZoC is 2⬡"],
+ :abilities [{:ability/id "long-arms"
+             :ability/name "Long Arms"
+             :ability/description "Player's ZoC is 2⬡"
+             :ability/condition [:= :self/has-ability? "long-arms"]
+             :ability/effect {:effect/type :bashketball/set-zoc-range
+                              :zoc/range 2}}],
  :set-slug "premiere",
  :slug "long-arms",
  :card-type :card-type/ABILITY_CARD,

@@ -6,6 +6,20 @@
  :card-type :card-type/PLAY_CARD,
  :set-slug "premiere",
  :fate 2,
- :play
- "Move one player to set a Screen. Ball carrier may attempt Shot at +1 SHT. Both ↷.",
+ :play {:play/id "pick-n-pop"
+       :play/description "Move one player to set a Screen. Ball carrier may attempt Shot at +1 SHT. Both ↷."
+       :play/targets [:target/screener-id :target/shooter-id]
+       :play/effect {:effect/type :bashketball/sequence
+                     :sequence/effects [{:effect/type :bashketball/move-player
+                                         :move/player-id :target/screener-id
+                                         :move/purpose :set-screen}
+                                        {:effect/type :bashketball/optional
+                                         :optional/effect {:effect/type :bashketball/initiate-skill-test
+                                                           :skill-test/type :shot
+                                                           :skill-test/player-id :target/shooter-id
+                                                           :skill-test/modifier 1}}
+                                        {:effect/type :bashketball/exhaust-player
+                                         :exhaust/player-id :target/screener-id}
+                                        {:effect/type :bashketball/exhaust-player
+                                         :exhaust/player-id :target/shooter-id}]}},
  :created-at #inst "2025-12-13T19:03:13.293191Z"}

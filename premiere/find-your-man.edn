@@ -1,8 +1,18 @@
 {:updated-at #inst "2025-12-13T19:12:35.016022Z",
  :image-prompt "A dwarf coach shouts at her team. ",
  :slug "find-your-man",
- :coaching "Move a player 3⬡ do not ↷."
- :signal "Move a player 1⬡.",
+ :call {:call/id "find-your-man-call"
+       :call/description "Move a player 3⬡ do not ↷."
+       :call/targets [:target/player-id]
+       :call/effect {:effect/type :bashketball/move-player
+                     :move/player-id :target/player-id
+                     :move/max-distance 3
+                     :move/no-exhaust true}}
+ :signal {:signal/id "find-your-man-signal"
+          :signal/description "Move a player 1⬡."
+          :signal/effect {:effect/type :bashketball/move-player
+                          :move/player-id :target/player-id
+                          :move/max-distance 1}},
  :name "Find your Man(?)",
  :card-type :card-type/COACHING_CARD,
  :set-slug "premiere",

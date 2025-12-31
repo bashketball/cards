@@ -7,7 +7,22 @@
  :card-type :card-type/PLAYER_CARD,
  :sht 3,
  :set-slug "premiere",
- :abilities ["Lockdown Defender: Once per turn, when an opponent in Duran's ZoC attempts a Shot, you may discard a card to apply an additional -1 SHT."],
+ :abilities [{:ability/id "lockdown-defender"
+             :ability/name "Lockdown Defender"
+             :ability/description "Once per turn, when an opponent in Duran's ZoC attempts a Shot, you may discard a card to apply an additional -1 SHT."
+             :ability/trigger {:trigger/event :bashketball/shoot.before
+                               :trigger/condition [:and
+                                                   [:not= :event/shooter-team :self/team]
+                                                   [:bashketball/in-zoc? :doc/state :self/id :event/shooter-id]]
+                               :trigger/once-per-turn? true}
+             :ability/effect {:effect/type :bashketball/optional
+                              :optional/cost {:effect/type :bashketball/discard-cards
+                                              :discard/count 1
+                                              :discard/chooser :self/controller}
+                              :optional/effect {:effect/type :bashketball/add-modifier
+                                                :modifier/stat :sht
+                                                :modifier/value -1
+                                                :modifier/duration :until-resolved}}}],
  :size :size/MD,
  :card-subtypes [:card-subtype/UNIQUE],
  :def 7,

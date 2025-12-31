@@ -3,6 +3,20 @@
  :set-slug "premiere"
  :card-type :card-type/COACHING_CARD
  :fate 6
- :coaching "Play after your player attempts a Screen. That player may move 2⬡ toward the basket. Does not cause ↷."
- :signal "+1 DEF to next Screen."
+ :call {:call/id "slip-the-screen-call"
+       :call/description "Play after your player attempts a Screen. That player may move 2⬡ toward the basket. Does not cause ↷."
+       :call/requires [:bashketball/just-screened? :doc/state :target/player-id]
+       :call/targets [:target/player-id]
+       :call/effect {:effect/type :bashketball/optional
+                     :optional/effect {:effect/type :bashketball/move-player
+                                       :move/player-id :target/player-id
+                                       :move/max-distance 2
+                                       :move/direction :toward-basket
+                                       :move/no-exhaust true}}}
+ :signal {:signal/id "slip-the-screen-signal"
+          :signal/description "+1 DEF to next Screen."
+          :signal/effect {:effect/type :bashketball/add-modifier
+                          :modifier/stat :def
+                          :modifier/value 1
+                          :modifier/duration :next-screen}}
  :image-prompt "An orc who just set a pick rolls hard to the basket, leaving his bewildered mark behind"}

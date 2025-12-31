@@ -3,5 +3,17 @@
  :set-slug "premiere"
  :card-type :card-type/TEAM_ASSET_CARD
  :fate 5
- :asset-power "Passive: Your SM players' ZoC affects Shots as if same size."
+ :asset-power {:asset/id "defensive-scheme"
+              :asset/description "Passive: Your SM players' ZoC affects Shots as if same size."
+              :asset/condition [:and
+                                [:= :event/player-team :self/team]
+                                [:= [:bashketball/player-size :doc/state :event/player-id] :size/SM]]
+              :asset/triggers [{:trigger {:trigger/event :bashketball/calculate-zoc-size.at
+                                          :trigger/condition [:and
+                                                              [:= :event/defender-team :self/team]
+                                                              [:= [:bashketball/player-size :doc/state :event/defender-id] :size/SM]
+                                                              [:= :event/action-type :shot]]}
+                                :effect {:effect/type :bashketball/set-effective-size
+                                         :size/target-id :event/defender-id
+                                         :size/effective :same-as-opponent}}]}
  :image-prompt "A coach points at a tactical board covered in red X marks and defensive rotations"}

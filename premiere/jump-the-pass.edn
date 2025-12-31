@@ -5,6 +5,22 @@
  :card-type :card-type/PLAY_CARD,
  :set-slug "premiere",
  :fate 3,
- :play
- "Make opponent attempt a pass between two players of your choice. If the pass fails your player within 3⬡ of the receiver takes possession of the ball. They may move 5⬡ ↷.",
+ :play {:play/id "jump-the-pass"
+       :play/description "Make opponent attempt a pass between two players of your choice. If the pass fails your player within 3⬡ of the receiver takes possession of the ball. They may move 5⬡ ↷."
+       :play/targets [:target/passer-id :target/receiver-id :target/interceptor-id]
+       :play/effect {:effect/type :bashketball/initiate-skill-test
+                     :skill-test/type :pass
+                     :skill-test/player-id :target/passer-id
+                     :skill-test/target-id :target/receiver-id
+                     :skill-test/forced true
+                     :skill-test/on-failure {:effect/type :bashketball/sequence
+                                             :sequence/effects [{:effect/type :bashketball/give-ball
+                                                                 :give/player-id :target/interceptor-id}
+                                                                {:effect/type :bashketball/optional
+                                                                 :optional/effect {:effect/type :bashketball/sequence
+                                                                                   :sequence/effects [{:effect/type :bashketball/move-player
+                                                                                                       :move/player-id :target/interceptor-id
+                                                                                                       :move/max-distance 5}
+                                                                                                      {:effect/type :bashketball/exhaust-player
+                                                                                                       :exhaust/player-id :target/interceptor-id}]}}]}}},
  :created-at #inst "2025-12-13T19:15:29.006682Z"}

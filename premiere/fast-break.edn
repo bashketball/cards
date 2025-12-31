@@ -5,6 +5,20 @@
  :card-type :card-type/PLAY_CARD,
  :set-slug "premiere",
  :fate 3,
- :play
- "Move player up to their speed even if exhausted. Attempt a Shot at -1. ↷. skip next unexhaust.",
+ :play {:play/id "fast-break"
+       :play/description "Move player up to their speed even if exhausted. Attempt a Shot at -1. ↷. Skip next unexhaust."
+       :play/targets [:target/player-id]
+       :play/effect {:effect/type :bashketball/sequence
+                     :sequence/effects [{:effect/type :bashketball/move-player
+                                         :move/player-id :target/player-id
+                                         :move/max-distance :player/speed
+                                         :move/ignore-exhaustion true}
+                                        {:effect/type :bashketball/initiate-skill-test
+                                         :skill-test/type :shot
+                                         :skill-test/player-id :target/player-id
+                                         :skill-test/modifier -1}
+                                        {:effect/type :bashketball/exhaust-player
+                                         :exhaust/player-id :target/player-id}
+                                        {:effect/type :bashketball/skip-unexhaust
+                                         :skip/player-id :target/player-id}]}},
  :created-at #inst "2025-12-13T19:19:36.952696Z"}

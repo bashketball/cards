@@ -4,5 +4,22 @@
  :card-type :card-type/TEAM_ASSET_CARD
  :subtype :asset-subtype/RESPONSE
  :fate 3
- :asset-power "Play face-down. Response: After your player attempts a Screen, reveal and discard this card. Another player may move up to 4⬡ toward the basket and immediately receive a Pass attempt at +1 PSS."
+ :asset-power {:asset/id "back-door-cut"
+              :asset/description "Play face-down. Response: After your player attempts a Screen, reveal and discard this card. Another player may move up to 4⬡ toward the basket and immediately receive a Pass attempt at +1 PSS."
+              :asset/response {:response/trigger {:trigger/event :bashketball/screen.after
+                                                  :trigger/condition [:= :event/screener-team :self/team]}
+                               :response/prompt "Execute back door cut?"
+                               :response/effect {:effect/type :bashketball/sequence
+                                                 :sequence/effects [{:effect/type :bashketball/reveal-asset
+                                                                     :reveal/asset-id :self/asset-id}
+                                                                    {:effect/type :bashketball/move-player
+                                                                     :move/player-id :target/cutter-id
+                                                                     :move/max-distance 4
+                                                                     :move/direction :toward-basket}
+                                                                    {:effect/type :bashketball/initiate-skill-test
+                                                                     :skill-test/type :pass
+                                                                     :skill-test/target-id :target/cutter-id
+                                                                     :skill-test/modifier 1}
+                                                                    {:effect/type :bashketball/discard-asset
+                                                                     :discard/asset-id :self/asset-id}]}}}
  :image-prompt "A human cuts behind a distracted defender while an orc holds a crushing screen, the ball already in flight"}

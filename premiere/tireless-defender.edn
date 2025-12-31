@@ -3,5 +3,9 @@
  :set-slug "premiere"
  :card-type :card-type/ABILITY_CARD
  :fate 0
- :abilities ["This player exerts ZoC even while exhausted."]
+ :abilities [{:ability/id "tireless-defender"
+             :ability/name "Tireless Defender"
+             :ability/description "This player exerts ZoC even while exhausted."
+             :ability/condition [:= :self/has-ability? "tireless-defender"]
+             :ability/effect {:effect/type :bashketball/grant-zoc-while-exhausted}}]
  :image-prompt "A sweat-drenched dwarf in a defensive stance, exhausted but refusing to give ground, eyes locked on the ball handler"}

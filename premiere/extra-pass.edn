@@ -3,6 +3,26 @@
  :set-slug "premiere"
  :card-type :card-type/COACHING_CARD
  :fate 8
- :coaching "After a successful Pass, draw a card. The receiver may immediately attempt another Pass without ↷."
- :signal "+1 PSS to next Pass."
+ :call {:call/id "extra-pass-call"
+       :call/description "After a successful Pass, draw a card. The receiver may immediately attempt another Pass without ↷."
+       :call/requires [:bashketball/has-ball? :doc/state :target/passer-id]
+       :call/targets [:target/passer-id :target/receiver-id]
+       :call/effect {:effect/type :bashketball/initiate-skill-test
+                     :skill-test/type :pass
+                     :skill-test/player-id :target/passer-id
+                     :skill-test/target-id :target/receiver-id
+                     :skill-test/on-success {:effect/type :bashketball/sequence
+                                             :sequence/effects [{:effect/type :bashketball/draw-cards
+                                                                 :draw/count 1}
+                                                                {:effect/type :bashketball/optional
+                                                                 :optional/effect {:effect/type :bashketball/initiate-skill-test
+                                                                                   :skill-test/type :pass
+                                                                                   :skill-test/player-id :target/receiver-id
+                                                                                   :skill-test/no-exhaust true}}]}}}
+ :signal {:signal/id "extra-pass-signal"
+          :signal/description "+1 PSS to next Pass."
+          :signal/effect {:effect/type :bashketball/add-modifier
+                          :modifier/stat :pss
+                          :modifier/value 1
+                          :modifier/duration :next-pass}}
  :image-prompt "A goblin catches and whips the ball across court in one motion, the defense scrambling to rotate"}

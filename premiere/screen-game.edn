@@ -3,5 +3,12 @@
  :set-slug "premiere"
  :card-type :card-type/TEAM_ASSET_CARD
  :fate 5
- :asset-power "Passive: Your players get +1 DEF when attempting to Screen."
+ :asset-power {:asset/id "screen-game"
+              :asset/description "Passive: Your players get +1 DEF when attempting to Screen."
+              :asset/triggers [{:trigger {:trigger/event :bashketball/screen.before
+                                          :trigger/condition [:= :event/screener-team :self/team]}
+                                :effect {:effect/type :bashketball/add-modifier
+                                         :modifier/stat :def
+                                         :modifier/value 1
+                                         :modifier/duration :until-resolved}}]}
  :image-prompt "An orc sets a pick so wide that three defenders are frozen in place, unable to help"}

@@ -7,4 +7,13 @@
  :set-slug "premiere",
  :fate 4,
  :created-at #inst "2025-12-13T18:40:20.419939Z",
- :asset-power "Passive: Your SM players are treated as same size when targeted by defensive actions."}
+ :asset-power {:asset/id "hrong-workout-plan"
+              :asset/description "Passive: Your SM players are treated as same size when targeted by defensive actions."
+              :asset/triggers [{:trigger {:trigger/event :bashketball/calculate-size-advantage.at
+                                          :trigger/condition [:and
+                                                              [:= :event/target-team :self/team]
+                                                              [:= [:bashketball/player-size :doc/state :event/target-id] :size/SM]
+                                                              [:bashketball/is-defensive-action? :event/action-type]]}
+                                :effect {:effect/type :bashketball/set-effective-size
+                                         :size/target-id :event/target-id
+                                         :size/effective :same-as-opponent}}]}}

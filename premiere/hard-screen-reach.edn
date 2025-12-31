@@ -2,10 +2,38 @@
  :image-prompt
  "One half a giant Elf flattens a dwarfs on a screen. Other half a long limbed Orc takes a defensive position",
  :slug "hard-screen-reach",
- :offense "Move a player 3⬡ ↷. If adjacent to an opponent Attempt Defend. ✓ Opponent ↷ skips next unexhaust. ✓+2 Attempt Injure.",
+ :offense {:action/id "hard-screen"
+          :action/description "Move a player 3⬡ ↷. If adjacent to an opponent Attempt Defend. ✓ Opponent ↷ skips next unexhaust. ✓+2 Attempt Injure."
+          :action/targets [:target/screener-id]
+          :action/effect {:effect/type :bashketball/sequence
+                          :sequence/effects [{:effect/type :bashketball/move-player
+                                              :move/player-id :target/screener-id
+                                              :move/max-distance 3}
+                                             {:effect/type :bashketball/exhaust-player
+                                              :exhaust/player-id :target/screener-id}
+                                             {:effect/type :bashketball/conditional
+                                              :conditional/if [:bashketball/has-adjacent-opponent? :doc/state :target/screener-id]
+                                              :conditional/then {:effect/type :bashketball/initiate-skill-test
+                                                                 :skill-test/type :defend
+                                                                 :skill-test/player-id :target/screener-id
+                                                                 :skill-test/target-id :target/adjacent-opponent-id
+                                                                 :skill-test/on-success {:effect/type :bashketball/sequence
+                                                                                         :sequence/effects [{:effect/type :bashketball/exhaust-player
+                                                                                                             :exhaust/player-id :target/adjacent-opponent-id}
+                                                                                                            {:effect/type :bashketball/skip-unexhaust
+                                                                                                             :skip/player-id :target/adjacent-opponent-id}]}
+                                                                 :skill-test/on-success-plus-2 {:effect/type :bashketball/initiate-skill-test
+                                                                                                :skill-test/type :injure
+                                                                                                :skill-test/target-id :target/adjacent-opponent-id}}}]}},
  :name "Hard Screen / Reach",
  :card-type :card-type/SPLIT_PLAY_CARD,
  :set-slug "premiere",
  :fate 3,
- :defense "Until the end of your next turn, player's ZoC is 2⬡.",
+ :defense {:action/id "reach"
+          :action/description "Until the end of your next turn, player's ZoC is 2⬡."
+          :action/targets [:target/player-id]
+          :action/effect {:effect/type :bashketball/set-zoc-range
+                          :zoc/player-id :target/player-id
+                          :zoc/range 2
+                          :zoc/duration :until-end-of-next-turn}},
  :created-at #inst "2025-12-13T18:57:41.977360Z"}

@@ -7,4 +7,13 @@
  :set-slug "premiere",
  :fate 4,
  :created-at #inst "2025-12-13T19:04:14.191719Z",
- :asset-power "Passive: LG players get +1 Speed."}
+ :asset-power {:asset/id "conditioning-coach"
+              :asset/description "Passive: LG players get +1 Speed."
+              :asset/condition [:= [:bashketball/player-size :doc/state :target/player-id] :size/LG]
+              :asset/triggers [{:trigger {:trigger/event :bashketball/calculate-speed.at
+                                          :trigger/condition [:and
+                                                              [:= :event/player-team :self/team]
+                                                              [:= [:bashketball/player-size :doc/state :event/player-id] :size/LG]]}
+                                :effect {:effect/type :bashketball/add-modifier
+                                         :modifier/stat :speed
+                                         :modifier/value 1}}]}}

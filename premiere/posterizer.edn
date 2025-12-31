@@ -6,6 +6,22 @@
  :card-type :card-type/PLAY_CARD,
  :set-slug "premiere",
  :fate 0,
- :play
- "Ball carrier within 3⬡ of basket: Move adjacent, attempt Shot at +3 SHT. ↷. If successful, adjacent defender skips next unexhaust.",
+ :play {:play/id "posterizer"
+       :play/description "Ball carrier within 3⬡ of basket: Move adjacent, attempt Shot at +3 SHT. ↷. If successful, adjacent defender skips next unexhaust."
+       :play/requires [:and
+                       [:bashketball/has-ball? :doc/state :target/player-id]
+                       [:<= [:bashketball/distance-to-basket :doc/state :target/player-id] 3]]
+       :play/targets [:target/player-id]
+       :play/effect {:effect/type :bashketball/sequence
+                     :sequence/effects [{:effect/type :bashketball/move-player
+                                         :move/player-id :target/player-id
+                                         :move/destination :adjacent-to-basket}
+                                        {:effect/type :bashketball/initiate-skill-test
+                                         :skill-test/type :shot
+                                         :skill-test/player-id :target/player-id
+                                         :skill-test/modifier 3
+                                         :skill-test/on-success {:effect/type :bashketball/skip-unexhaust
+                                                                 :skip/target :adjacent-defender}}
+                                        {:effect/type :bashketball/exhaust-player
+                                         :exhaust/player-id :target/player-id}]}},
  :created-at #inst "2025-12-13T18:59:01.122786Z"}

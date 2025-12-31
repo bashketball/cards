@@ -3,5 +3,21 @@
  :set-slug "premiere"
  :card-type :card-type/PLAY_CARD
  :fate 6
- :play "Create a Team Asset with Response: When an opponent moves out of your player's ZoC, that player may move up to 2⬡ to follow. Does not cause ↷. Discard after use."
+ :play {:play/id "stay-in-front"
+       :play/description "Create a Team Asset with Response: When an opponent moves out of your player's ZoC, that player may move up to 2⬡ to follow. Does not cause ↷. Discard after use."
+       :play/effect {:effect/type :bashketball/create-asset
+                     :asset/temporary true
+                     :asset/power {:asset/id "stay-in-front-asset"
+                                   :asset/response {:response/trigger {:trigger/event :bashketball/move.after
+                                                                       :trigger/condition [:and
+                                                                                           [:not= :event/player-team :self/team]
+                                                                                           [:bashketball/left-zoc? :doc/state :event/player-id :self/defender-id]]}
+                                                    :response/prompt "Follow the opponent?"
+                                                    :response/effect {:effect/type :bashketball/sequence
+                                                                      :sequence/effects [{:effect/type :bashketball/move-player
+                                                                                          :move/player-id :self/defender-id
+                                                                                          :move/max-distance 2
+                                                                                          :move/no-exhaust true}
+                                                                                         {:effect/type :bashketball/discard-asset
+                                                                                          :discard/asset-id :self/asset-id}]}}}}}}
  :image-prompt "A dwarf shuffles sideways in perfect defensive stance, mirroring every juke of the frustrated ball handler"}

@@ -3,5 +3,15 @@
  :set-slug "premiere"
  :card-type :card-type/TEAM_ASSET_CARD
  :fate 4
- :asset-power "Passive: After a successful Pass, the passer may move 1⬡. Does not cause ↷."
+ :asset-power {:asset/id "motion-offense"
+              :asset/description "Passive: After a successful Pass, the passer may move 1⬡. Does not cause ↷."
+              :asset/triggers [{:trigger {:trigger/event :bashketball/pass.after
+                                          :trigger/condition [:and
+                                                              [:= :event/success true]
+                                                              [:= :event/passer-team :self/team]]}
+                                :effect {:effect/type :bashketball/optional
+                                         :optional/effect {:effect/type :bashketball/move-player
+                                                           :move/player-id :event/passer-id
+                                                           :move/max-distance 1
+                                                           :move/no-exhaust true}}}]}
  :image-prompt "A chalkboard diagram showing arrows flowing in continuous loops, players always in motion"}

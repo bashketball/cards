@@ -4,5 +4,21 @@
  :card-type :card-type/TEAM_ASSET_CARD
  :subtype :asset-subtype/RESPONSE
  :fate 4
- :asset-power "Play face-down. Response: When an opponent attempts a Pass to a player within your player's ZoC, reveal and discard this card. Your player may attempt a Steal at +2 DEF before the Pass resolves."
+ :asset-power {:asset/id "deny-the-entry"
+              :asset/description "Play face-down. Response: When an opponent attempts a Pass to a player within your player's ZoC, reveal and discard this card. Your player may attempt a Steal at +2 DEF before the Pass resolves."
+              :asset/response {:response/trigger {:trigger/event :bashketball/pass.before
+                                                  :trigger/condition [:and
+                                                                      [:not= :event/passer-team :self/team]
+                                                                      [:bashketball/in-zoc? :doc/state :self/defender-id :event/receiver-id]]}
+                               :response/prompt "Attempt to intercept the pass?"
+                               :response/effect {:effect/type :bashketball/sequence
+                                                 :sequence/effects [{:effect/type :bashketball/reveal-asset
+                                                                     :reveal/asset-id :self/asset-id}
+                                                                    {:effect/type :bashketball/initiate-skill-test
+                                                                     :skill-test/type :steal
+                                                                     :skill-test/player-id :self/defender-id
+                                                                     :skill-test/modifier 2
+                                                                     :skill-test/timing :before-pass-resolves}
+                                                                    {:effect/type :bashketball/discard-asset
+                                                                     :discard/asset-id :self/asset-id}]}}}
  :image-prompt "A troll's massive arm shoots out to intercept a pass, the intended receiver's eyes going wide"}

@@ -6,5 +6,22 @@
  :card-type :card-type/PLAY_CARD,
  :set-slug "premiere",
  :fate 5,
- :play "Move a player 2⬡. That player gains +2 DEF until the end of turn. If the ball is loose they may move again up to 2⬡.",
+ :play {:play/id "box-out"
+       :play/description "Move a player 2⬡. That player gains +2 DEF until the end of turn. If the ball is loose they may move again up to 2⬡."
+       :play/targets [:target/player-id]
+       :play/effect {:effect/type :bashketball/sequence
+                     :sequence/effects [{:effect/type :bashketball/move-player
+                                         :move/player-id :target/player-id
+                                         :move/max-distance 2}
+                                        {:effect/type :bashketball/add-modifier
+                                         :modifier/target-id :target/player-id
+                                         :modifier/stat :def
+                                         :modifier/value 2
+                                         :modifier/duration :until-end-of-turn}
+                                        {:effect/type :bashketball/conditional
+                                         :conditional/if [:bashketball/ball-loose? :doc/state]
+                                         :conditional/then {:effect/type :bashketball/optional
+                                                            :optional/effect {:effect/type :bashketball/move-player
+                                                                              :move/player-id :target/player-id
+                                                                              :move/max-distance 2}}}]}},
  :created-at #inst "2025-12-13T18:35:30.584655Z"}

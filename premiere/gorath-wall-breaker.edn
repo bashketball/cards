@@ -7,7 +7,15 @@
  :card-type :card-type/PLAYER_CARD,
  :sht 2,
  :set-slug "premiere",
- :abilities ["Immovable: When Gorath sets a Screen, opponents cannot move him with card effects."],
+ :abilities [{:ability/id "immovable"
+             :ability/name "Immovable"
+             :ability/description "When Gorath sets a Screen, opponents cannot move him with card effects."
+             :ability/condition [:and
+                                 [:= :self/screening? true]
+                                 [:= :effect/type :bashketball/move-player]
+                                 [:= :effect/target-id :self/id]
+                                 [:not= :effect/controller :self/team]]
+             :ability/effect {:effect/type :bashketball/prevent}}],
  :size :size/LG,
  :card-subtypes [:card-subtype/UNIQUE],
  :def 5,

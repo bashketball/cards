@@ -3,6 +3,18 @@
  :set-slug "premiere"
  :card-type :card-type/COACHING_CARD
  :fate 8
- :coaching "Draw a card. Look at the top 2 cards of your opponent's deck. You may put them back in any order."
- :signal "Look at the top card of your opponent's deck."
+ :call {:call/id "study-the-tape-call"
+       :call/description "Draw a card. Look at the top 2 cards of your opponent's deck. You may put them back in any order."
+       :call/effect {:effect/type :bashketball/sequence
+                     :sequence/effects [{:effect/type :bashketball/draw-cards
+                                         :draw/count 1}
+                                        {:effect/type :bashketball/scry
+                                         :scry/deck :opponent
+                                         :scry/count 2
+                                         :scry/may-reorder true}]}}
+ :signal {:signal/id "study-the-tape-signal"
+          :signal/description "Look at the top card of your opponent's deck."
+          :signal/effect {:effect/type :bashketball/scry
+                          :scry/deck :opponent
+                          :scry/count 1}}
  :image-prompt "A troll squints at a crystal ball showing ghostly replays while a goblin takes notes furiously"}

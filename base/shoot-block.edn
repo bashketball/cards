@@ -1,11 +1,41 @@
 {:updated-at #inst "2025-12-14T04:02:08.283865Z",
  :slug "shoot-block",
- :offense "Ball carrier within 7⬡ of basket attempts Shot, ↷.",
+ :offense {:action/id "shoot"
+          :action/description "Ball carrier within 7⬡ of basket attempts Shot, ↷."
+          :action/requires [:and
+                            [:bashketball/has-ball? :doc/state :target/player-id]
+                            [:<= [:bashketball/distance-to-basket :doc/state :target/player-id] 7]]
+          :action/targets [:target/player-id]
+          :action/effect {:effect/type :bashketball/sequence
+                          :sequence/effects [{:effect/type :bashketball/initiate-skill-test
+                                              :skill-test/type :shot
+                                              :skill-test/player-id :target/player-id}
+                                             {:effect/type :bashketball/exhaust-player
+                                              :exhaust/player-id :target/player-id}]}},
  :name "Shoot / Block",
  :card-type :card-type/STANDARD_ACTION_CARD,
  :set-slug "base",
  :card-subtypes [:card-subtype/BASIC],
  :fate 3,
- :defense
- "Your player adjacent to opponent within 4⬡ of basket: Opponent must attempt Shot or ↷ and skip next unexhaust. You ↷.",
+ :defense {:action/id "block"
+          :action/description "Your player adjacent to opponent within 4⬡ of basket: Opponent must attempt Shot or ↷ and skip next unexhaust. You ↷."
+          :action/requires [:and
+                            [:bashketball/adjacent? :doc/state :target/defender-id :target/opponent-id]
+                            [:<= [:bashketball/distance-to-basket :doc/state :target/opponent-id] 4]]
+          :action/targets [:target/defender-id :target/opponent-id]
+          :action/effect {:effect/type :bashketball/sequence
+                          :sequence/effects [{:effect/type :bashketball/force-choice
+                                              :choice/player-id :target/opponent-id
+                                              :choice/options [{:choice/label "Attempt Shot"
+                                                                :choice/effect {:effect/type :bashketball/initiate-skill-test
+                                                                                :skill-test/type :shot
+                                                                                :skill-test/player-id :target/opponent-id}}
+                                                               {:choice/label "Exhaust and skip unexhaust"
+                                                                :choice/effect {:effect/type :bashketball/sequence
+                                                                                :sequence/effects [{:effect/type :bashketball/exhaust-player
+                                                                                                    :exhaust/player-id :target/opponent-id}
+                                                                                                   {:effect/type :bashketball/skip-unexhaust
+                                                                                                    :skip/player-id :target/opponent-id}]}}]}
+                                             {:effect/type :bashketball/exhaust-player
+                                              :exhaust/player-id :target/defender-id}]}},
  :created-at #inst "2025-12-12T14:31:53Z"}

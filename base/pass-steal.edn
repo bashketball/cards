@@ -1,11 +1,37 @@
 {:updated-at #inst "2025-12-14T04:01:34.923570Z",
  :slug "pass-steal",
- :offense "Ball carrier attempts Pass to teammate within 6⬡, ↷.",
+ :offense {:action/id "pass"
+          :action/description "Ball carrier attempts Pass to teammate within 6⬡, ↷."
+          :action/requires [:and
+                            [:bashketball/has-ball? :doc/state :target/passer-id]
+                            [:<= [:bashketball/hex-distance :doc/state :target/passer-id :target/receiver-id] 6]]
+          :action/targets [:target/passer-id :target/receiver-id]
+          :action/effect {:effect/type :bashketball/sequence
+                          :sequence/effects [{:effect/type :bashketball/initiate-skill-test
+                                              :skill-test/type :pass
+                                              :skill-test/player-id :target/passer-id
+                                              :skill-test/target-id :target/receiver-id}
+                                             {:effect/type :bashketball/exhaust-player
+                                              :exhaust/player-id :target/passer-id}]}},
  :name "Pass / Steal",
  :card-type :card-type/STANDARD_ACTION_CARD,
  :set-slug "base",
  :card-subtypes [:card-subtype/BASIC],
  :fate 3,
- :defense
- "Engage ball carrier within 2⬡. Attempt Defend-2. SM defender ignores size Disadvantage. ✓ You take the ball. ✗ You ↷.",
+ :defense {:action/id "steal"
+          :action/description "Engage ball carrier within 2⬡. Attempt Defend-2. SM defender ignores size Disadvantage. ✓ You take the ball. ✗ You ↷."
+          :action/requires [:and
+                            [:bashketball/has-ball? :doc/state :target/ball-carrier-id]
+                            [:<= [:bashketball/hex-distance :doc/state :target/defender-id :target/ball-carrier-id] 2]]
+          :action/targets [:target/defender-id :target/ball-carrier-id]
+          :action/effect {:effect/type :bashketball/initiate-skill-test
+                          :skill-test/type :defend
+                          :skill-test/player-id :target/defender-id
+                          :skill-test/target-id :target/ball-carrier-id
+                          :skill-test/modifier -2
+                          :skill-test/ignore-size-disadvantage [:= [:bashketball/player-size :doc/state :target/defender-id] :size/SM]
+                          :skill-test/on-success {:effect/type :bashketball/give-ball
+                                                  :give/player-id :target/defender-id}
+                          :skill-test/on-failure {:effect/type :bashketball/exhaust-player
+                                                  :exhaust/player-id :target/defender-id}}},
  :created-at #inst "2025-11-29T05:31:58Z"}

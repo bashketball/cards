@@ -3,5 +3,16 @@
  :set-slug "premiere"
  :card-type :card-type/PLAY_CARD
  :fate 3
- :play "Choose an opponent in your player's ZoC. That opponent's next Shot or Pass attempt this turn is at an additional -2. Your player ↷."
+ :play {:play/id "intense-pressure"
+       :play/description "Choose an opponent in your player's ZoC. That opponent's next Shot or Pass attempt this turn is at an additional -2. Your player ↷."
+       :play/requires [:bashketball/in-zoc? :doc/state :target/defender-id :target/opponent-id]
+       :play/targets [:target/defender-id :target/opponent-id]
+       :play/effect {:effect/type :bashketball/sequence
+                     :sequence/effects [{:effect/type :bashketball/add-modifier
+                                         :modifier/target-id :target/opponent-id
+                                         :modifier/stats [:sht :pss]
+                                         :modifier/value -2
+                                         :modifier/duration :next-attempt-this-turn}
+                                        {:effect/type :bashketball/exhaust-player
+                                         :exhaust/player-id :target/defender-id}]}}
  :image-prompt "A troll looms over a panicked elf, arms up and blocking every angle, sweat dripping from both"}

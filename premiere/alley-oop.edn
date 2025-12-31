@@ -3,5 +3,22 @@
  :set-slug "premiere"
  :card-type :card-type/PLAY_CARD
  :fate 1
- :play "Ball carrier attempts Pass to teammate within 4⬡ of basket. If successful, receiver immediately attempts Shot at +2 SHT (ignores adjacent defenders). Both players ↷."
+ :play {:play/id "alley-oop"
+       :play/description "Ball carrier attempts Pass to teammate within 4⬡ of basket. If successful, receiver immediately attempts Shot at +2 SHT (ignores adjacent defenders). Both players ↷."
+       :play/requires [:bashketball/has-ball? :doc/state :target/passer-id]
+       :play/targets [:target/passer-id :target/receiver-id]
+       :play/effect {:effect/type :bashketball/sequence
+                     :sequence/effects [{:effect/type :bashketball/initiate-skill-test
+                                         :skill-test/type :pass
+                                         :skill-test/player-id :target/passer-id
+                                         :skill-test/target-id :target/receiver-id
+                                         :skill-test/on-success {:effect/type :bashketball/initiate-skill-test
+                                                                 :skill-test/type :shot
+                                                                 :skill-test/player-id :target/receiver-id
+                                                                 :skill-test/modifier 2
+                                                                 :skill-test/ignore-adjacent-defenders true}}
+                                        {:effect/type :bashketball/exhaust-player
+                                         :exhaust/player-id :target/passer-id}
+                                        {:effect/type :bashketball/exhaust-player
+                                         :exhaust/player-id :target/receiver-id}]}}
  :image-prompt "A goblin lobs the ball high as an orc leaps above two defenders, about to hammer it home"}

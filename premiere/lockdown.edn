@@ -3,5 +3,22 @@
  :set-slug "premiere"
  :card-type :card-type/PLAY_CARD
  :fate 1
- :play "Choose an opponent. Until end of your next turn, that player's Speed is halved and they cannot receive passes. If they have the ball, they must immediately attempt Pass or Shot or lose possession."
+ :play {:play/id "lockdown"
+       :play/description "Choose an opponent. Until end of your next turn, that player's Speed is halved and they cannot receive passes. If they have the ball, they must immediately attempt Pass or Shot or lose possession."
+       :play/targets [:target/opponent-id]
+       :play/effect {:effect/type :bashketball/sequence
+                     :sequence/effects [{:effect/type :bashketball/add-modifier
+                                         :modifier/target-id :target/opponent-id
+                                         :modifier/stat :speed
+                                         :modifier/multiplier 0.5
+                                         :modifier/duration :until-end-of-next-turn}
+                                        {:effect/type :bashketball/add-condition
+                                         :condition/target-id :target/opponent-id
+                                         :condition/type :cannot-receive-passes
+                                         :condition/duration :until-end-of-next-turn}
+                                        {:effect/type :bashketball/conditional
+                                         :conditional/if [:bashketball/has-ball? :doc/state :target/opponent-id]
+                                         :conditional/then {:effect/type :bashketball/force-choice
+                                                            :choice/player-id :target/opponent-id
+                                                            :choice/options [:attempt-pass :attempt-shot :lose-possession]}}]}}
  :image-prompt "A dwarf defender shadows an elf so closely their shadows merge, the elf's eyes wide with panic"}

@@ -3,5 +3,16 @@
  :set-slug "premiere"
  :card-type :card-type/PLAY_CARD
  :fate 2
- :play "Move one player up to 3⬡. Until end of your next turn, that player's ZoC applies an additional -2 to Passes."
+ :play {:play/id "passing-lane-denial"
+       :play/description "Move one player up to 3⬡. Until end of your next turn, that player's ZoC applies an additional -2 to Passes."
+       :play/targets [:target/player-id]
+       :play/effect {:effect/type :bashketball/sequence
+                     :sequence/effects [{:effect/type :bashketball/move-player
+                                         :move/player-id :target/player-id
+                                         :move/max-distance 3}
+                                        {:effect/type :bashketball/add-zoc-modifier
+                                         :zoc/player-id :target/player-id
+                                         :zoc/affects :passes
+                                         :zoc/modifier -2
+                                         :zoc/duration :until-end-of-next-turn}]}}
  :image-prompt "A dwarf slides into position with arms spread wide, cutting off the outlet pass before it can happen"}

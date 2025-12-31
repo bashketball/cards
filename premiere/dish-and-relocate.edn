@@ -3,5 +3,17 @@
  :set-slug "premiere"
  :card-type :card-type/PLAY_CARD
  :fate 4
- :play "Ball carrier attempts Pass. If successful, the passer may move up to 3⬡. Does not cause ↷."
+ :play {:play/id "dish-and-relocate"
+       :play/description "Ball carrier attempts Pass. If successful, the passer may move up to 3⬡. Does not cause ↷."
+       :play/requires [:bashketball/has-ball? :doc/state :target/passer-id]
+       :play/targets [:target/passer-id :target/receiver-id]
+       :play/effect {:effect/type :bashketball/initiate-skill-test
+                     :skill-test/type :pass
+                     :skill-test/player-id :target/passer-id
+                     :skill-test/target-id :target/receiver-id
+                     :skill-test/on-success {:effect/type :bashketball/optional
+                                             :optional/effect {:effect/type :bashketball/move-player
+                                                               :move/player-id :target/passer-id
+                                                               :move/max-distance 3
+                                                               :move/no-exhaust true}}}}
  :image-prompt "A goblin flicks a no-look pass while already sprinting to a new position, defender left grasping at air"}
